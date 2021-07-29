@@ -17,6 +17,13 @@ RSpec.describe Product, type: :model do
       expect(product).to_not be_valid
     end
   end
+  
+  it "is not valid without a product_feedback" do
+      product = build(:product_feedback)
+      product.reviews_count = nil
+      expect(product_feedback).to_not be_valid
+    end
+  end
 
   describe 'aggregations' do
     it 'updates review count of the company on create' do
