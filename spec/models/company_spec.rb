@@ -571,13 +571,13 @@ RSpec.describe Company, type: :model do
 
     it "returns product when specified" do
       product = company.products.create! build(:product).attributes
-      product.reviews.create! build(:product_review, vendor_id: company.id).attributes
+      product.reviews.create! build(user_product_review, vendor_id: company.id).attributes
       product.reviews.first.reviewer.industries.create! build(:industry).attributes
       service = company.services.create! build(:service).attributes
-      service.reviews.create! build(:service_review, vendor_id: company.id).attributes
+      service.reviews.create! build(user_service, vendor_id: company.id).attributes
       service.reviews.first.reviewer.industries.create! build(:industry).attributes
       project = company.projects.create! build(:project).attributes
-      project.reviews.create! build(:project_review, vendor_id: company.id).attributes
+      project.reviews.create! build(user_project, vendor_id: company.id).attributes
       project.reviews.first.reviewer.industries.create! build(:industry).attributes
       expect(company.reviewable_industries("Product").length).to eq(1)
     end
@@ -619,10 +619,10 @@ RSpec.describe Company, type: :model do
     it "returns aggregate_score" do
       company = create(:company)
       product = company.products.create! build(:product).attributes
-      product.reviews.create! build(:product_review, vendor_id: company.id).attributes
+      product.reviews.create! build(:user_review, vendor_id: company.id).attributes
       expect(company.aggregate_score).to eq(0.0)
       product.reviews.create! build(:product_rating, vendor_id: company.id).attributes
-      product.reviews.create! build(:product_review, vendor_id: company.id).attributes
+      product.reviews.create! build(:user_review, vendor_id: company.id).attributes
       company.reload
       expect(company.aggregate_score).to_not eq(0.0)
     end
