@@ -7,7 +7,7 @@ module SwaggerDocs::App
     swagger_schema :Token do
       key :type, :object
       key :required, [:name, :password]
-
+      key :required [:account_code]
       property :access_token do
         key :type, :string
         key :example, 'abCdEfgHIJKlmnOpQrSTUvWXyzJIUzI1NiJ9.eyJpc3MiOiJwcm9kdWN0X3Jldmlld1
