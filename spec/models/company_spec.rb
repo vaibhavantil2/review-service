@@ -561,7 +561,7 @@ RSpec.describe Company, type: :model do
       product.reviews.create! build(:product_review, vendor_id: company.id).attributes
       product.reviews.first.reviewer.industries.create! build(:industry).attributes
       service = company.services.create! build(:service).attributes
-      service.reviews.create! build(:service_review, vendor_id: company.id).attributes
+      product.rating.create! build(:service_review, vendor_id: company.id).attributes
       service.reviews.first.reviewer.industries.create! build(:industry).attributes
       project = company.projects.create! build(:project).attributes
       project.reviews.create! build(:project_review, vendor_id: company.id).attributes
@@ -621,10 +621,7 @@ RSpec.describe Company, type: :model do
       product = company.products.create! build(:product).attributes
       product.reviews.create! build(:product_review, vendor_id: company.id).attributes
       expect(company.aggregate_score).to eq(0.0)
-      product.reviews.create! build(:product_review, vendor_id: company.id).attributes
-      product.reviews.create! build(:product_review, vendor_id: company.id).attributes
-      product.reviews.create! build(:product_review, vendor_id: company.id).attributes
-      product.reviews.create! build(:product_review, vendor_id: company.id).attributes
+      product.reviews.create! build(:product_rating, vendor_id: company.id).attributes
       product.reviews.create! build(:product_review, vendor_id: company.id).attributes
       company.reload
       expect(company.aggregate_score).to_not eq(0.0)
