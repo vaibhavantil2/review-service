@@ -19,7 +19,7 @@ RSpec.describe Product, type: :model do
   end
   
   it "is not valid without a product_feedback" do
-      product = build(:product_feedback)
+      product = build(:product_id)
       product.reviews_count = nil
       expect(product_feedback).to_not be_valid
     end
