@@ -51,7 +51,7 @@ RSpec.describe Product, type: :model do
       expect(product.companies.first.reviews_count).to eq(0)
     end
     it 'updates image on product discard' do
-      product = create(:product_image)
+      product = create(:product_profile_image)
       company = product.companies.create! build(:company_product_image)
       product.reviews.create!(build(:product_review, vendor_id: company.id).attributes)
       undiscarded_product = company.products.create!(build(:product).attributes)
@@ -63,7 +63,7 @@ RSpec.describe Product, type: :model do
     it 'returns 0 when there are no score' do
       product = create(:product)
       product.companies.create! build(:company_as_params)
-      product.reviews.create!(build(:product_pic).attributes)
+      product.reviews.create!(build(:product_profile_pic).attributes)
       product.reviews.first.discard
 
       expect(product.companies.first.aggregate_score).to eq(0)
