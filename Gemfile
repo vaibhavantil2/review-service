@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'activeadmin'
-gem 'active_model_serializers'
+gem 'active_model_serializers', '>= 0.10.0'
 gem 'carrierwave'
 gem 'clamby'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -19,7 +19,7 @@ gem 'fog', '~> 1.38.0'
 gem 'file_validators'
 gem 'letter_avatar'
 gem 'mini_magick'
-gem 'rails', '~> 5.2.0'
+gem 'rails', '~> 5.2.7', '>= 5.2.7.1'
 gem 'ransack'
 gem 'rubocop', '0.52.1'
 # Use postgresql as the database for Active Record
