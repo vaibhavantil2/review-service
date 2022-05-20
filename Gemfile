@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'activeadmin'
-gem 'active_model_serializers'
+gem 'active_model_serializers', '>= 0.10.0'
 gem 'carrierwave'
 gem 'clamby'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
