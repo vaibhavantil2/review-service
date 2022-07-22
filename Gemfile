@@ -6,13 +6,13 @@ git_source(:github) do |repo_name|
 end
 
 gem 'activeadmin'
-gem 'active_model_serializers'
+gem 'active_model_serializers', '>= 0.10.0'
 gem 'carrierwave'
 gem 'clamby'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'doorkeeper'
 gem 'doorkeeper-jwt'
-gem 'discard', '~> 1.0'
+gem 'discard', '~> 1.0', '>= 1.0.0'
 gem 'devise'
 gem 'email_validator'
 gem 'fog', '~> 1.38.0'
@@ -73,7 +73,7 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-watcher-listen', '~> 2.0.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
