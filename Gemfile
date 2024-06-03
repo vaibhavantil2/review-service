@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'activeadmin'
+gem 'activeadmin', '>= 3.2.2'
 gem 'active_model_serializers'
 gem 'carrierwave'
 gem 'clamby'
