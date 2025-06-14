@@ -56,7 +56,7 @@ group :development, :test do
   # Gems for ruby debugging
   gem 'database_cleaner'
   gem 'debase', '0.2.2.beta10'
-  gem 'factory_bot_rails'
+  gem 'factory_bot_rails', '>= 6.5.0', '>= 6.5.0'
   gem 'ffaker'
   gem 'ruby-debug-ide', '0.6.0'
   gem 'rspec-rails'
