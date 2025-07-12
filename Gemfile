@@ -5,22 +5,22 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'activeadmin'
-gem 'active_model_serializers'
-gem 'carrierwave'
+gem 'activeadmin', '>= 3.1.0'
+gem 'active_model_serializers', '>= 0.10.3'
+gem 'carrierwave', '>= 1.2.3'
 gem 'clamby'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'doorkeeper'
+gem 'doorkeeper', '>= 4.4.2'
 gem 'doorkeeper-jwt'
-gem 'discard', '~> 1.0'
-gem 'devise'
-gem 'email_validator'
-gem 'fog', '~> 1.38.0'
-gem 'file_validators'
+gem 'discard', '~> 1.1', '>= 1.1.0'
+gem 'devise', '>= 4.7.0'
+gem 'email_validator', '>= 2.0.0'
+gem 'fog', '~> 2.2.0'
+gem 'file_validators', '>= 2.3.0'
 gem 'letter_avatar'
 gem 'mini_magick'
-gem 'rails', '~> 5.2.0'
-gem 'ransack'
+gem 'rails', '~> 7.1.0'
+gem 'ransack', '>= 2.3.1'
 gem 'rubocop', '0.52.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
@@ -47,7 +47,7 @@ gem 'simplecov', require: false, group: :test
 gem 'rack-cors', require: 'rack/cors'
 
 # Used to obfuscate IDs
-gem "hashid-rails"
+gem "hashid-rails", ">= 1.2.2"
 
 
 group :development, :test do
@@ -56,10 +56,10 @@ group :development, :test do
   # Gems for ruby debugging
   gem 'database_cleaner'
   gem 'debase', '0.2.2.beta10'
-  gem 'factory_bot_rails'
+  gem 'factory_bot_rails', '>= 4.10.0', '>= 4.10.0'
   gem 'ffaker'
-  gem 'ruby-debug-ide', '0.6.0'
-  gem 'rspec-rails'
+  gem 'ruby-debug-ide', '0.6.1'
+  gem 'rspec-rails', '>= 3.8.0'
   gem 'rspec-teamcity', '~> 0.0.1', require: false
   gem 'rubocop-teamcity-formatter', git: 'https://github.com/govtechsg/rubocop-teamcity-formatter.git', require: false
 end
