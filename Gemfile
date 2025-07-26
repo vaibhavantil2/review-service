@@ -5,21 +5,21 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'activeadmin'
-gem 'active_model_serializers'
+gem 'activeadmin', '>= 1.3.1'
+gem 'active_model_serializers', '>= 0.10.0'
 gem 'carrierwave'
 gem 'clamby'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'doorkeeper'
+gem 'doorkeeper', '>= 4.4.2'
 gem 'doorkeeper-jwt'
 gem 'discard', '~> 1.0'
-gem 'devise'
+gem 'devise', '>= 4.5.0'
 gem 'email_validator'
-gem 'fog', '~> 1.38.0'
+gem 'fog', '~> 1.39.0'
 gem 'file_validators'
 gem 'letter_avatar'
 gem 'mini_magick'
-gem 'rails', '~> 5.2.0'
+gem 'rails', '~> 5.2.1'
 gem 'ransack'
 gem 'rubocop', '0.52.1'
 # Use postgresql as the database for Active Record
@@ -27,7 +27,7 @@ gem 'pg', '~> 0.18'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use Figaro to store secrets and env variables
-gem 'figaro'
+gem 'figaro', '>= 1.2.0'
 gem 'valid_url'
 # Generate swagger documentation
 gem 'swagger-blocks'
@@ -56,10 +56,10 @@ group :development, :test do
   # Gems for ruby debugging
   gem 'database_cleaner'
   gem 'debase', '0.2.2.beta10'
-  gem 'factory_bot_rails'
+  gem 'factory_bot_rails', '>= 4.10.0', '>= 4.10.0'
   gem 'ffaker'
   gem 'ruby-debug-ide', '0.6.0'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>= 3.8.0'
   gem 'rspec-teamcity', '~> 0.0.1', require: false
   gem 'rubocop-teamcity-formatter', git: 'https://github.com/govtechsg/rubocop-teamcity-formatter.git', require: false
 end
