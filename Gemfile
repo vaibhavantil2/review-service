@@ -5,22 +5,22 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'activeadmin'
+gem 'activeadmin', '>= 1.3.1'
 gem 'active_model_serializers'
 gem 'carrierwave'
 gem 'clamby'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'doorkeeper'
 gem 'doorkeeper-jwt'
-gem 'discard', '~> 1.0'
+gem 'discard', '~> 1.2', '>= 1.2.1'
 gem 'devise'
 gem 'email_validator'
 gem 'fog', '~> 1.38.0'
 gem 'file_validators'
 gem 'letter_avatar'
 gem 'mini_magick'
-gem 'rails', '~> 5.2.0'
-gem 'ransack'
+gem 'rails', '~> 7.1.5', '>= 7.1.5.2'
+gem 'ransack', '>= 2.0.0'
 gem 'rubocop', '0.52.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
@@ -47,7 +47,7 @@ gem 'simplecov', require: false, group: :test
 gem 'rack-cors', require: 'rack/cors'
 
 # Used to obfuscate IDs
-gem "hashid-rails"
+gem "hashid-rails", ">= 1.2.2"
 
 
 group :development, :test do
